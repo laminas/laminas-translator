@@ -6,12 +6,14 @@ namespace Laminas\Translator;
 
 interface TranslatorInterface
 {
+    public const DEFAULT_TEXT_DOMAIN = 'default';
+
     /**
      * Translate a message.
      */
     public function translate(
         string $message,
-        string $textDomain = 'default',
+        string $textDomain = self::DEFAULT_TEXT_DOMAIN,
         ?string $locale = null,
     ): string;
 
@@ -22,7 +24,7 @@ interface TranslatorInterface
         string $singular,
         string $plural,
         int $number,
-        string $textDomain = 'default',
+        string $textDomain = self::DEFAULT_TEXT_DOMAIN,
         ?string $locale = null
     ): string;
 }
