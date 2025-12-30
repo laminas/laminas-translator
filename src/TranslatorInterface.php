@@ -10,29 +10,21 @@ interface TranslatorInterface
 
     /**
      * Translate a message.
-     *
-     * @param string $message
-     * @param string $textDomain
-     * @param string|null $locale
-     * @return string
      */
-    public function translate($message, $textDomain = self::DEFAULT_TEXT_DOMAIN, $locale = null);
+    public function translate(
+        string $message,
+        string $textDomain = self::DEFAULT_TEXT_DOMAIN,
+        ?string $locale = null,
+    ): string;
 
     /**
      * Translate a plural message.
-     *
-     * @param string      $singular
-     * @param string      $plural
-     * @param int         $number
-     * @param string      $textDomain
-     * @param string|null $locale
-     * @return string
      */
     public function translatePlural(
-        $singular,
-        $plural,
-        $number,
-        $textDomain = self::DEFAULT_TEXT_DOMAIN,
-        $locale = null
-    );
+        string $singular,
+        string $plural,
+        int $number,
+        string $textDomain = self::DEFAULT_TEXT_DOMAIN,
+        ?string $locale = null
+    ): string;
 }
