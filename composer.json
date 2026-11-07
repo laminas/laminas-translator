@@ -30,7 +30,7 @@
     "require-dev": {
         "laminas/laminas-coding-standard": "~3.1.0",
         "phpunit/phpunit": "^11.5.55",
-        "vimeo/psalm": "^6.16.1"
+        "vimeo/psalm": "^7.0.0"
     },
     "autoload": {
         "psr-4": {
